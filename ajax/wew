@@ -1,0 +1,13 @@
+	$r = array();
+            $result = mysqli_query($con, 
+                "SELECT 
+                    *
+                FROM 
+                    `EMPLOYEE` ,
+                    `EMPLOYEESKILLS`
+                where 
+                    EMPLOYEE.EmployeeID='".$empid."' and 
+                    EMPLOYEESKILLS.EmployeeID ='".$empid."' and
+                    EMPLOYEESKILLS.EmployeeSkills = '".$skills."'
+
+                    ");

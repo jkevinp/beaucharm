@@ -1,0 +1,23 @@
+ body
+      {
+        background-color:#333333;
+      }
+      #map-canvas 
+      {
+        width:  500px;
+        height: 400px;
+      }
+      #btn_checkIn
+      {
+        width: 500px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        background-color:#B22222;
+      }
+      .header
+      {
+        width:500px;
+        background-color: #888888;
+        z-index:9999;
+      }

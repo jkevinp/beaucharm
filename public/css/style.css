@@ -1,0 +1,187 @@
+@import url(../fonts/Englebert);
+@import url(../fonts/MonotypeCorsiva);
+
+body {
+    background: url(../images/bg-content.jpg) 50% 50%;
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+/*Header*/
+.navbar-fixed-top .nav {
+    font-family: 'Englebert';
+    font-size: 16pt;
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+.navbar-inverse {
+  background-color: #fff;
+  border-color: #fefefe;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #fff;
+  background-color: #FF9933;
+  border-radius: 8px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: #FF9933;
+  border-radius: 8px;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #FF9933;
+  border-radius: 8px;
+}
+
+/*Register Modal*/
+.formSpace{
+    margin-top: 5px;
+}
+.formAlign{
+    margin-right: 55pt;
+}
+.formAlign2{
+    margin-left: 25pt;
+}
+
+/*Home Section*/
+.row {
+    padding-top: 5px;
+}
+.jumbospace {
+    padding-top: 15px;
+}
+.hdrAd{
+    font-family: 'Monotype Corsiva';
+    font-size: 36pt;
+    color: #FF9966;
+}
+.pragrphAd{
+    font-family: 'Englebert';
+    font-size: 15pt;
+    color: #fff;
+}
+.well {
+    color: #FF9966;
+    font-family: 'Englebert';
+    font-size: 14pt;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 20px;
+    margin: 2px 20px 2px 20px; 
+}
+.promo_btn{
+    margin: -5px 0 0 3px;
+    font-size: 12pt;
+}
+.border-horiz {
+    background: url(../images/border-horiz.gif) repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    height: 2px;
+    margin: 25pt 0 25pt;
+}
+
+/*About Section*/
+.hdr{
+    font-family: 'Englebert';
+    font-size: 38pt;
+    color: #FF9966;
+    padding-left: 35pt;
+}
+.pragrphAb{
+    font-family: 'Englebert';
+    font-size: 14pt;
+    color: #fff;
+    padding-left: 35pt;
+    line-height: 20pt;
+}
+.pragrphAb{
+    padding-bottom: 15pt;
+}
+
+/*Services Section*/
+.row_services{
+    margin-top: 10px; 
+}
+.hdr2{
+    font-family: 'Englebert';
+    font-size: 38pt;
+    color: #FF9966;
+}
+.subhdr{
+    font-family: 'Englebert';
+    font-size: 25pt;
+    color: #FF9966;
+}
+.col_bg{
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
+.thumbs{
+    padding: 30px;
+}
+
+.img_services{
+    width: 180pt;
+    height: 210pt;
+}
+.btn-default {
+    background: none repeat scroll 0 0 #ff6600;
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #000;
+    padding: 5px 14px;
+    text-shadow: none;
+    transition: all 0.3s ease 0s;
+}
+
+/*Footer*/
+.footer_style{
+    margin: 20px 0 5px 0;
+    background-color: #fff;
+    padding: 10px;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+
+/*Dashboard part*/
+.booking_final > li{
+    list-style-type: none;
+    font-size: 12pt;
+}
+.hdr3{
+    font-family: 'Englebert';
+    font-size: 24pt;
+    color: #FF9966;
+}
+.profile_table-design{
+    background-color: rgba(255, 255, 255, 0.05);
+    font-family: 'Englebert';
+    font-size: 14pt;
+    color: #FF9966;
+}
+
+.popover {
+    z-index: 9999;
+    position: fixed;
+}

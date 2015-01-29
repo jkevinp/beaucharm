@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'Alexa';
+	src: url('./Alexa.eot');
+	src: local('Alexa'), url('./Alexa.woff') format('woff'), url('./Alexa.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_24798">Text with this font applied</p> */
+.fontsforweb_fontid_24798 {
+	font-family: 'Alexa' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */

@@ -1,0 +1,123 @@
+<?php
+class BootStrap {
+    function __construct() 
+    {
+        $url = isset($_GET['url']) ? $_GET['url'] : null; //if url is set get it else null
+        $origUrl = $url;
+       // $url = rtrim ($url , '/'); //trims the url
+        $url = array_filter(explode('/',$url));
+        /*echo "<br/><br/><br/><br/><pre>";
+        print_r($url);
+        echo "</pre>";*/
+        if(empty($url[0]))
+        {
+           require 'controllers/index.php';
+           header("location:index");
+        }
+        else
+        {
+             //requires the controller
+            if(isset($url[1]))
+            {
+            $file = 'controllers/'.$url[1].'.php';
+            echo $file;
+            if(file_exists($file))
+            {
+                //echo "<br/> Require on $file";
+                require $file;
+            }
+            else
+            {
+                $this->error();
+               // echo "error on require controller.";
+                return false;
+            }
+            $loader = $url[1];
+            //echo "<br/>".$loader.": loader";
+            $controller = new $loader;
+            $controller->loadModel($url[1]);
+            if(isset($url[2]))
+            {
+                if(!empty($url[2]))
+                {
+                   // echo "execute: ".$url[2];
+                    $parameters = explode('?', $origUrl);
+                  //  echo "<pre>";
+                  //  print_r($parameters);
+                  //  echo "</pre>";
+                    $controller->$url[2]();
+                }
+                
+            }else
+            {
+                    if($loader !== "error")
+                    {
+                         $controller->$url[1]();
+                    //     echo "Bootstrap msg ->controller->url[1]()";
+                    }
+            }
+            // echo" <br/><br/><br/><br/><br/><br/>";
+            }
+            else
+            {
+               // $file = 'controllers/'.$url[0].'.php';
+                echo $file;
+                if(file_exists($file))
+                {
+                  //  echo "<br/> Require on $file";
+                    
+                    require $file;
+                    $controller = new $url[0];
+                    $controller->$url[0]();
+                }
+                else
+                {
+                    $this->error();
+                  //  echo "error on require controller.";
+                    return false;
+                }
+            }
+        }
+    }
+    function error()
+    {
+        //display error view
+        require 'controllers/error.php';
+        $controller = new Error();
+        return false;
+    }
+
+}
+/*if(isset($url[2]))
+            {
+                if(method_exists($controller, $url[1]))
+                {
+                    $controller->{$url[1]}($url[2]);
+                    echo "we're at url[2]";
+                    
+                }else
+                {
+                    $this->error();
+                    return false;
+                }
+            }
+            else
+            {
+                if(isset($url[1]))
+                {
+                    
+                    if(method_exists($controller, $url[1]))
+                    {
+                         $controller->{$url[1]}();
+                    }
+                    else
+                    {
+                        $this->error();
+                            return false;
+                    }
+                }
+                else
+                {
+                    $controller->index();
+                }
+            }*/
